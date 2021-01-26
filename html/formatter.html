@@ -54,10 +54,10 @@
                 <li><a href="dev-utility.html">Home</a></li>
                 <li class="has-children current"><a href="formatter.html">Formatter</a>
                     <ul>
-                        <li><a href="formatter.html?q=jsonFormatter">JSON</a></li>
-                        <li><a href="formatter.html?q=xmlFormatter">XML</a></li>
-                        <li><a href="formatter.html?q=option1Formatter">Option 1</a></li>
-                        <li><a href="formatter.html?q=option2Formatter">Option 2</a></li>
+                        <li><a href="formatter.html?formatter=jsonFormatter">JSON</a></li>
+                        <li><a href="formatter.html?formatter=xmlFormatter">XML</a></li>
+                        <!--<li><a href="formatter.html?formatter=option1Formatter">Option 1</a></li>
+                        <li><a href="formatter.html?formatter=option2Formatter">Option 2</a></li>-->
                     </ul>
                 </li>
                 <li><a href="demo.html">Compiler</a></li>
@@ -98,8 +98,8 @@
                     <select name="formatter-id" id="formatter-id">
                         <option value="jsonFormatter">JSON</option>
                         <option value="xmlFormatter">XML</option>
-                        <option value="option1Formatter">Option 1</option>
-                        <option value="option2Formatter">Option 2</option>
+                        <!--<option value="option1Formatter">Option 1</option>
+                        <option value="option2Formatter">Option 2</option> -->
                     </select>
                     <div class="message form-field">
                             <textarea name="cMessage" id="cMessage" class="h-full-width" placeholder="Please enter here your un-formatted text.">
@@ -136,6 +136,11 @@
 <script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../js/main.js"></script>
 <script src="../js/formatter/formatter.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#formatter-id").val(new URL(document.location).searchParams.get("formatter"));
+});
+</script>
 
 </body>
 
