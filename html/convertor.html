@@ -52,7 +52,7 @@
         <div class="row">
             <ul class="s-header__nav">
                 <li><a href="dev-utility.html">Home</a></li>
-                <li class="has-children current"><a href="formatter.html">Formatter</a>
+                <li class="has-children"><a href="formatter.html">Formatter</a>
                     <ul>
                         <li><a href="formatter.html?formatter=jsonFormatter">JSON</a></li>
                         <li><a href="formatter.html?formatter=xmlFormatter">XML</a></li>
@@ -60,7 +60,7 @@
                         <li><a href="formatter.html?formatter=option2Formatter">Option 2</a></li>-->
                     </ul>
                 </li>
-                <li class="has-children"><a href="convertor.html">Convertor</a>
+                <li class="has-children current"><a href="convertor.html">Convertor</a>
                     <ul>
                         <li><a href="convertor.html?convertor=time">Time Convertor</a></li>
                         <li><a href="convertor.html?convertor=currency">Currency Convertor</a></li>
@@ -89,9 +89,9 @@
             <article class="entry">
                 <div class="entry__content">
                     </br></br>
-                    <select name="formatter-id" id="formatter-id">
-                        <option value="jsonFormatter">JSON</option>
-                        <option value="xmlFormatter">XML</option>
+                    <select name="convertor-id" id="convertor-id">
+                        <option value="time">Time</option>
+                        <option value="currency">Currency</option>
                         <!--<option value="option1Formatter">Option 1</option>
                         <option value="option2Formatter">Option 2</option> -->
                     </select>
@@ -129,10 +129,10 @@
 ================================================== -->
 <script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../js/main.js"></script>
-<script src="../js/formatter/formatter.js"></script>
+<script src="../js/convertor/convertor.js"></script>
 <script>
     $(document).ready(function() {
-        $("#formatter-id").val(new URL(document.location).searchParams.get("formatter"));
+        $("#convertor-id").val(new URL(document.location).searchParams.get("convertor"));
 });
 </script>
 
