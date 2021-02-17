@@ -2670,54 +2670,54 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 @keyframes circle-1 {
   0% {
-    transform: translate(0, 0);
+    transform: translate(50px, 0);
   }
   100% {
-    transform: translate(-35px, -50px);
+    transform: translate(15px, -50px);
   }
 }
 
 @keyframes circle-2 {
   0% {
-    transform: translate(0, 0);
+    transform: translate(50px, 0);
   }
   100% {
-    transform: translate(35px, 50px);
+    transform: translate(85px, 50px);
   }
 }
 
 @keyframes circle-3 {
   0% {
-    transform: translate(0, 0);
+    transform: translate(60px, 0);
   }
   100% {
-    transform: translate(-60px, 0);
+    transform: translate(-10px, 0);
   }
 }
 
 @keyframes circle-4 {
   0% {
-    transform: translate(0, 0);
+    transform: translate(50px, 0);
   }
   100% {
-    transform: translate(60px, 0);
+    transform: translate(110px, 0);
   }
 }
 
 @keyframes circle-5 {
   0% {
-    transform: translate(0, 0);
+    transform: translate(50px, 0);
   }
   100% {
-    transform: translate(-35px, 50px);
+    transform: translate(15px, 50px);
   }
 }
 
 @keyframes circle-6 {
   0% {
-    transform: translate(0, 0);
+    transform: translate(50px, 0);
   }
   100% {
-    transform: translate(35px, -50px);
+    transform: translate(85px, -50px);
   }
 }
