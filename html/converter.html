@@ -60,13 +60,7 @@
                         <li><a href="formatter.html?formatter=option2Formatter">Option 2</a></li>-->
                     </ul>
                 </li>
-                <li class="has-children current"><a href="convertor.html">Convertor</a>
-                    <ul>
-                        <li><a href="convertor.html?convertor=time">Time Convertor</a></li>
-                        <li><a href="convertor.html?convertor=currency">Currency Convertor</a></li>
-                        <!-- <li><a href="formatter.html">PDF Convertor</a></li> -->
-                    </ul>
-                </li>
+                <li class="current"><a href="converter.html">Time Converter</a></li>
                 <li><a href="cheat-sheets.html">Cheat Sheets</a></li>
                 <li><a href="zen-mode.html">Zen Mode</a></li>
             </ul> <!-- end #nav -->
@@ -85,24 +79,37 @@
 ================================================== -->
 <div class="s-content">
     <div class="row">
-        <div id="main" class="s-content__main large-8 column">
-            <article class="entry">
-                <div class="entry__content">
-                    </br></br>
-                    <select name="convertor-id" id="convertor-id">
-                        <option value="time">Time</option>
-                        <option value="currency">Currency</option>
-                        <!--<option value="option1Formatter">Option 1</option>
-                        <option value="option2Formatter">Option 2</option> -->
-                    </select>
-                    <div class="message form-field">
-                            <textarea name="cMessage" id="cMessage" class="h-full-width" placeholder="Please enter here your un-formatted text.">
-                            </textarea>
-                    </div>
-                    <input name="format-text" id="format-text" class="btn btn--primary btn-wide btn--large" value="Format" type="submit" onclick="format() ">
+        <div id="sidebar" class="s-content__sidebar large-4 column">
+            <div class="widget widget--search">
+                <br>
+                    <table>
+                            <tr>
+                                <td>
+                                    Nano Second: <input type="text" name="nanoSeconds" id="nanoSeconds" class="text-search" placeholder="0" onchange="convert(this) " \>
+                                </td>
+                                <td>
+                                    Milli Second: <input type="text" name="milliSeconds" id="milliSeconds" class="text-search" placeholder="0" onchange="convert(this) " \>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Second: <input type="text" name="seconds" id="seconds" class="text-search" placeholder="0" onchange="convert(this) " \>
+                                </td>
+                                <td>
+                                    Minute: <input type="text" name="minute" id="minute" class="text-search" placeholder="0" onchange="convert(this) " \>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Hour: <input type="text" name="hour" id="hour" class="text-search" placeholder="0" onchange="convert(this) " \>
+                                </td>
+                                <td>
+                                    Day: <input type="text" name="day" id="day" class="text-search" placeholder="0" onchange="convert(this) " \>
+                                </td>
+                            </tr>
+                    </table>
                     <input name="clear-text" id="clear-text" class="btn btn--primary btn-wide btn--large" value="Clear" type="submit" onclick="clearText() ">
                 </div>
-            </article> <!-- end entry -->
 
         </div> <!-- end main -->
 
@@ -129,12 +136,7 @@
 ================================================== -->
 <script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../js/main.js"></script>
-<script src="../js/convertor/convertor.js"></script>
-<script>
-    $(document).ready(function() {
-        $("#convertor-id").val(new URL(document.location).searchParams.get("convertor"));
-});
-</script>
+<script src="../js/converter/converter.js"></script>
 
 </body>
 
