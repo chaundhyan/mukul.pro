@@ -20,7 +20,10 @@
       "rewrite": "/html/utility.html"
     }
   },
+  "defaultHeaders": {
+    "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
+  },
   "mimeTypes": {
-    ".js": "application/javascript;charset=utf-8"
+    "custom": "text/html"
   }
 }
