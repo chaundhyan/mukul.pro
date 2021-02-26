@@ -19,5 +19,8 @@
     "404": {
       "rewrite": "/html/utility.html"
     }
+  },
+  "mimeTypes": {
+    ".js": "application/javascript;charset=utf-8"
   }
 }
