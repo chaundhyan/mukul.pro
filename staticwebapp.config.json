@@ -1,25 +1,23 @@
 {
   "routes": [
     {
-      "route": "/index.html",
-      "serve": "/html/utility.html"
+      "route": "/*",
+      "rewrite": "/html/utility.html"
     }
   ],
-  "platformErrorOverrides": [
-    {
-      "errorType": "NotFound",
-      "serve": "/html/utility.html"
+  "responseOverrides": {
+    "400" : {
+      "rewrite": "/html/utility.html"
     },
-    {
-      "errorType": "Unauthenticated",
-      "statusCode": "302",
-      "serve": "/index.html"
+    "401": {
+      "redirect": "/html/utility.html",
+      "statusCode": 302
+    },
+    "403": {
+      "rewrite": "/html/utility.html"
+    },
+    "404": {
+      "rewrite": "/html/utility.html"
     }
-  ],
-  "defaultHeaders": {
-    "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
-  },
-  "mimeTypes": {
-    "custom": "text/html"
   }
 }
