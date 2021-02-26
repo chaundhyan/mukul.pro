@@ -1,0 +1,25 @@
+{
+  "routes": [
+    {
+      "route": "/index.html",
+      "serve": "/html/utility.html"
+    }
+  ],
+  "platformErrorOverrides": [
+    {
+      "errorType": "NotFound",
+      "serve": "/html/utility.html"
+    },
+    {
+      "errorType": "Unauthenticated",
+      "statusCode": "302",
+      "serve": "/index.html"
+    }
+  ],
+  "defaultHeaders": {
+    "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
+  },
+  "mimeTypes": {
+    "custom": "text/html"
+  }
+}
