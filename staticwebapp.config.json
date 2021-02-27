@@ -1,7 +1,7 @@
 {
   "routes": [
     {
-      "route": "/*",
+      "route": "/",
       "redirect": "/html/utility.html"
     }
   ],
@@ -26,6 +26,7 @@
   "mimeTypes": {
     ".css": "text/css",
     ".js": "text/javascript",
-    ".pdf": "application/pdf"
+    ".pdf": "application/pdf",
+    ".html": "text/html"
   }
 }
