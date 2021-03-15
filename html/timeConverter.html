@@ -58,7 +58,13 @@
                         <li><a href="formatter.html?formatter=xmlFormatter">XML</a></li>
                     </ul>
                 </li>
-                <li class="current"><a href="converter.html">Time Converter</a></li>
+                <li class="has-children current"><a href="timeConverter.html">Converter</a>
+                    <ul>
+                        <li><a href="xmlJsonConverter.html?converter=xmlToJSON">XML to JSON</a></li>
+                        <li><a href="xmlJsonConverter.html?converter=jsonToXml">JSON to XML</a></li>
+                        <li><a href="timeConverter.html">Time Converter</a></li>
+                    </ul>
+                </li>
                 <li><a href="ref-sheets.html">Reference Docs</a></li>
                 <li><a href="zen-mode.html">Zen Mode</a></li>
             </ul> <!-- end #nav -->
@@ -83,30 +89,30 @@
                     <table>
                             <tr>
                                 <td>
-                                    Nano Second: <input type="text" name="nanoSeconds" id="nanoSeconds" class="text-search" placeholder="0" onchange="convert(this) " \>
+                                    Nano Second: <input type="number" name="nanoSeconds" id="nanoSeconds" class="text-search" placeholder="0" onchange="convertTime(this) " \>
                                 </td>
                                 <td>
-                                    Milli Second: <input type="text" name="milliSeconds" id="milliSeconds" class="text-search" placeholder="0" onchange="convert(this) " \>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Second: <input type="text" name="seconds" id="seconds" class="text-search" placeholder="0" onchange="convert(this) " \>
-                                </td>
-                                <td>
-                                    Minute: <input type="text" name="minute" id="minute" class="text-search" placeholder="0" onchange="convert(this) " \>
+                                    Milli Second: <input type="number" name="milliSeconds" id="milliSeconds" class="text-search" placeholder="0" onchange="convertTime(this) " \>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    Hour: <input type="text" name="hour" id="hour" class="text-search" placeholder="0" onchange="convert(this) " \>
+                                    Second: <input type="number" name="seconds" id="seconds" class="text-search" placeholder="0" onchange="convertTime(this) " \>
                                 </td>
                                 <td>
-                                    Day: <input type="text" name="day" id="day" class="text-search" placeholder="0" onchange="convert(this) " \>
+                                    Minute: <input type="number" name="minute" id="minute" class="text-search" placeholder="0" onchange="convertTime(this) " \>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Hour: <input type="number" name="hour" id="hour" class="text-search" placeholder="0" onchange="convertTime(this) " \>
+                                </td>
+                                <td>
+                                    Day: <input type="number" name="day" id="day" class="text-search" placeholder="0" onchange="convertTime(this) " \>
                                 </td>
                             </tr>
                     </table>
-                    <input name="clear-text" id="clear-text" class="btn btn--primary btn-wide btn--large" value="Clear" type="submit" onclick="clearText() ">
+                    <input name="clear-text" id="clear-text" class="btn btn--primary btn-wide btn--large" value="Clear" type="submit" onclick="clearTimeText() ">
                 </div>
 
         </div> <!-- end main -->

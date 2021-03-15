@@ -4,19 +4,20 @@ function format() {
         jsonFormatter()
     } else if (whichFormatter == 'xmlFormatter') {
         xmlFormatter()
-    } else if (whichFormatter == 'option1Formatter') {
-
-    } else if (whichFormatter == 'option2Formatter') {
-
     } else {
         document.getElementById("cMessage").value = "Invalid Formatter selected.";
     }
 }
 
 function jsonFormatter() {
-    var obj = JSON.parse(document.getElementById("cMessage").value.trim());
-    document.getElementById("cMessage").value = JSON.stringify(obj, undefined, 4);
-    document.getElementById("cMessage").select();
+    var obj;
+    try {
+		obj = JSON.parse(document.getElementById("cMessage").value.trim());
+		document.getElementById("cMessage").value = JSON.stringify(obj, undefined, 4);
+        document.getElementById("cMessage").select();
+    } catch (e) {
+		document.getElementById("cMessage").value = document.getElementById("cMessage").value.trim() + "\n" + e;
+    }
 }
 
 function xmlFormatter() {

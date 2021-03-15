@@ -21,6 +21,7 @@
     <!-- script
     ================================================== -->
     <script src="../js/modernizr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fast-xml-parser/3.18.0/parser.min.js"></script>
     <script defer src="../js/fontawesome/all.min.js"></script>
 
     <!-- favicons
@@ -52,13 +53,13 @@
         <div class="row">
             <ul class="s-header__nav">
                 <li><a href="utility.html">Home</a></li>
-                <li class="has-children current"><a href="formatter.html">Formatter</a>
+                <li class="has-children"><a href="formatter.html">Formatter</a>
                     <ul>
                         <li><a href="formatter.html?formatter=jsonFormatter">JSON</a></li>
                         <li><a href="formatter.html?formatter=xmlFormatter">XML</a></li>
                     </ul>
                 </li>
-                <li class="has-children"><a href="timeConverter.html">Converter</a>
+                <li class="has-children current"><a href="timeConverter.html">Converter</a>
                     <ul>
                         <li><a href="xmlJsonConverter.html?converter=xmlToJSON">XML to JSON</a></li>
                         <li><a href="xmlJsonConverter.html?converter=jsonToXml">JSON to XML</a></li>
@@ -87,16 +88,16 @@
             <article class="entry">
                 <div class="entry__content">
                     </br></br>
-                    <select name="formatter-id" id="formatter-id">
-                        <option value="jsonFormatter">JSON</option>
-                        <option value="xmlFormatter">XML</option>
+                    <select name="converter-id" id="converter-id">
+                        <option value="jsonToXml">JSON to XML</option>
+                        <option value="xmlToJSON">XML to JSON</option>
                     </select>
                     <div class="message form-field">
-                            <textarea name="cMessage" id="cMessage" class="h-full-width" placeholder="Please enter here your un-formatted text.">
+                            <textarea name="cMessage" id="cMessage" class="h-full-width" placeholder="Please enter here the text to convert.">
                             </textarea>
                     </div>
-                    <input name="format-text" id="format-text" class="btn btn--primary btn-wide btn--large" value="Format" type="submit" onclick="format() ">
-                    <input name="clear-text" id="clear-text" class="btn btn--primary btn-wide btn--large" value="Clear" type="submit" onclick="clearText() ">
+                    <input name="convert-text" id="convert-text" class="btn btn--primary btn-wide btn--large" value="Convert" type="submit" onclick="convert() ">
+                    <input name="clear-text" id="clear-text" class="btn btn--primary btn-wide btn--large" value="Clear" type="submit" onclick="clearConverterText() ">
                 </div>
             </article> <!-- end entry -->
 
@@ -125,10 +126,10 @@
 ================================================== -->
 <script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../js/main.js"></script>
-<script src="../js/formatter/formatter.js"></script>
+<script src="../js/converter/converter.js"></script>
 <script>
     $(document).ready(function() {
-        $("#formatter-id").val(new URL(document.location).searchParams.get("formatter"));
+        $("#converter-id").val(new URL(document.location).searchParams.get("converter"));
 });
 </script>
 
